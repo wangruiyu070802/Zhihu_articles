@@ -1,8 +1,8 @@
-"""将文章中的本地图片路径替换为 GitHub raw CDN URL。
+"""将文章中的本地图片路径替换为 jsDelivr CDN URL。
 
-使用前提：项目已推送到 GitHub，output/images/ 已在仓库中。
-raw URL 格式：
-  https://raw.githubusercontent.com/用户/仓库/main/output/images/xxx.jpeg
+jsDelivr 在國內有 CDN 节点，知乎可以正常加载。
+URL 格式：
+  https://cdn.jsdelivr.net/gh/用户/仓库@main/output/images/xxx.jpeg
 """
 
 import re
@@ -15,7 +15,12 @@ logger = get_logger(__name__)
 
 
 def replace_local_paths_in_md(filepath: Path) -> int:
-    """扫描 md 中的本地图片路径，替换为 GitHub raw URL。"""
+    """扫描 md 中的图片路径，替换为 jsDelivr CDN URL。
+
+    同时处理两种场景：
+    - 本地路径 → jsDelivr（首次运行）
+    - raw.githubusercontent.com → jsDelivr（迁移场景）
+    """
     repo = settings.github_image_repo
     if not repo:
         return 0
@@ -23,10 +28,9 @@ def replace_local_paths_in_md(filepath: Path) -> int:
     project_root = Path(__file__).parent.parent
     branch = "main"
     content = filepath.read_text(encoding="utf-8")
-    local_paths = _find_local_paths(content)
-    if not local_paths:
-        return 0
 
+    # 1. 替换本地路径
+    local_paths = _find_local_paths(content)
     replaced = 0
     for local_path in local_paths:
         fp = Path(local_path)
@@ -34,10 +38,17 @@ def replace_local_paths_in_md(filepath: Path) -> int:
             relative = fp.relative_to(project_root)
         except ValueError:
             continue
-        url = f"https://raw.githubusercontent.com/{repo}/{branch}/{relative.as_posix()}"
+        url = f"https://cdn.jsdelivr.net/gh/{repo}@{branch}/{relative.as_posix()}"
         content = content.replace(local_path, url)
         replaced += 1
-        logger.info(f"替换: {fp.name} → raw.githubusercontent.com")
+
+    # 2. 迁移旧的 raw.githubusercontent.com URL
+    old_url = f"https://raw.githubusercontent.com/{repo}/{branch}/"
+    new_url = f"https://cdn.jsdelivr.net/gh/{repo}@{branch}/"
+    migrated_count = content.count(old_url)
+    if migrated_count:
+        content = content.replace(old_url, new_url)
+        replaced += migrated_count
 
     if replaced:
         filepath.write_text(content, encoding="utf-8")
