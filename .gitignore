@@ -1,0 +1,31 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Database
+data/*.db
+data/*.db-wal
+data/*.db-shm
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Node
+node_modules/
+
+# Claude personal config
+.claude/
+
+# Git
+.git/

@@ -1,0 +1,14 @@
+# 核心依赖
+feedparser>=6.0.0
+httpx>=0.27.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# AI API
+openai>=1.0.0  # DeepSeek 兼容 OpenAI SDK
+
+# 浏览器自动化（后期可选）
+# playwright>=1.40.0
+
+# 工具
+python-dateutil>=2.8.0

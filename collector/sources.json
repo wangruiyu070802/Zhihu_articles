@@ -1,0 +1,374 @@
+{
+  "_note": "科技前沿信息源。enabled=true 表示默认启用（会尝试采集），false 表示关闭（可能需要代理或已失效）。",
+  "sources": [
+    "===== AI 公司官方博客 =====",
+    {
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/blog/feed.xml",
+      "category": "ai",
+      "enabled": true
+    },
+    {
+      "name": "Anthropic Blog",
+      "url": "https://www.anthropic.com/feed.xml",
+      "category": "ai",
+      "enabled": true
+    },
+    {
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/blog/rss/",
+      "category": "ai",
+      "enabled": true
+    },
+    {
+      "name": "Meta AI Blog",
+      "url": "https://ai.meta.com/blog/feed/",
+      "category": "ai",
+      "enabled": true
+    },
+    {
+      "name": "Google AI Blog",
+      "url": "https://blog.google/technology/ai/rss/",
+      "category": "ai",
+      "enabled": true
+    },
+    {
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "category": "ai",
+      "enabled": true
+    },
+
+    "===== 中国科技媒体 =====",
+    {
+      "name": "量子位",
+      "url": "https://www.qbitai.com/feed",
+      "category": "ai",
+      "enabled": true
+    },
+    {
+      "name": "机器之心",
+      "url": "https://jiqizhixin.com/rss",
+      "category": "ai",
+      "enabled": true
+    },
+    {
+      "name": "36氪",
+      "url": "https://36kr.com/feed",
+      "category": "tech",
+      "enabled": true
+    },
+    {
+      "name": "雷锋网",
+      "url": "https://www.leiphone.com/feed",
+      "category": "ai",
+      "enabled": true
+    },
+    {
+      "name": "钛媒体",
+      "url": "https://www.tmtpost.com/feed",
+      "category": "tech",
+      "enabled": true
+    },
+
+    "===== 国际科技新闻 =====",
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "category": "tech",
+      "enabled": true
+    },
+    {
+      "name": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "category": "tech",
+      "enabled": true
+    },
+    {
+      "name": "Wired",
+      "url": "https://www.wired.com/feed/rss",
+      "category": "tech",
+      "enabled": true
+    },
+    {
+      "name": "Ars Technica",
+      "url": "https://feeds.arstechnica.com/arstechnica/index",
+      "category": "tech",
+      "enabled": true
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/feed/",
+      "category": "tech",
+      "enabled": true
+    },
+    {
+      "name": "VentureBeat",
+      "url": "https://venturebeat.com/feed/",
+      "category": "tech",
+      "enabled": true
+    },
+    {
+      "name": "Engadget",
+      "url": "https://www.engadget.com/rss.xml",
+      "category": "tech",
+      "enabled": true
+    },
+
+    "===== 论文研究 =====",
+    {
+      "name": "ArXiv AI (cs.AI)",
+      "url": "http://export.arxiv.org/rss/cs.AI",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "ArXiv ML (cs.LG)",
+      "url": "http://export.arxiv.org/rss/cs.LG",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "ArXiv CV (cs.CV)",
+      "url": "http://export.arxiv.org/rss/cs.CV",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "ArXiv CL (cs.CL)",
+      "url": "http://export.arxiv.org/rss/cs.CL",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "ArXiv RO (cs.RO)",
+      "url": "http://export.arxiv.org/rss/cs.RO",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Semantic Scholar",
+      "url": "https://api.semanticscholar.org/feed/v1/latest",
+      "category": "research",
+      "enabled": false
+    },
+
+    "===== 科技公司工程博客 =====",
+    {
+      "name": "Netflix Tech Blog",
+      "url": "https://netflixtechblog.com/feed",
+      "category": "engineering",
+      "enabled": true
+    },
+    {
+      "name": "Uber Engineering",
+      "url": "https://www.uber.com/en-US/blog/engineering/feed.xml",
+      "category": "engineering",
+      "enabled": true
+    },
+    {
+      "name": "Apple ML Research",
+      "url": "https://machinelearning.apple.com/rss.xml",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/feed/",
+      "category": "research",
+      "enabled": true
+    },
+    {
+      "name": "GitHub Blog",
+      "url": "https://github.blog/feed/",
+      "category": "dev",
+      "enabled": true
+    },
+    {
+      "name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/rss/",
+      "category": "engineering",
+      "enabled": true
+    },
+    {
+      "name": "Stability AI Blog",
+      "url": "https://stability.ai/blog/rss.xml",
+      "category": "ai",
+      "enabled": true
+    },
+    {
+      "name": "Midjourney Blog",
+      "url": "https://www.midjourney.com/blog/feed.xml",
+      "category": "ai",
+      "enabled": false
+    },
+
+    "===== 开发者社区 =====",
+    {
+      "name": "Hacker News",
+      "url": "https://hnrss.org/frontpage?count=30",
+      "category": "tech",
+      "enabled": true
+    },
+    {
+      "name": "Hacker News Show",
+      "url": "https://hnrss.org/show?count=20",
+      "category": "tech",
+      "enabled": false
+    },
+    {
+      "name": "Lobsters",
+      "url": "https://lobste.rs/rss",
+      "category": "tech",
+      "enabled": true
+    },
+
+    "===== 科技商业 =====",
+    {
+      "name": "Bloomberg AI",
+      "url": "https://feeds.bloomberg.com/technology/news.rss",
+      "category": "business",
+      "enabled": true
+    },
+    {
+      "name": "CNBC Tech",
+      "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664",
+      "category": "business",
+      "enabled": true
+    },
+    {
+      "name": "Reuters Tech",
+      "url": "https://reut.rs/3R4q0jn",
+      "category": "business",
+      "enabled": false
+    },
+
+    "===== YouTube 科技频道 (通过 RSS) =====",
+    {
+      "name": "YouTube: Two Minute Papers",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg",
+      "category": "youtube",
+      "enabled": true
+    },
+    {
+      "name": "YouTube: Yannic Kilcher",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTnV0w-gQ",
+      "category": "youtube",
+      "enabled": true
+    },
+    {
+      "name": "YouTube: Andrej Karpathy",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXU7Jh0WJ4Vg3TGbGz5QxLg",
+      "category": "youtube",
+      "enabled": true
+    },
+    {
+      "name": "YouTube: IEEE Spectrum",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC6UOZ7h_HInBR0SA67ZW7QA",
+      "category": "youtube",
+      "enabled": true
+    },
+    {
+      "name": "YouTube: Lex Fridman",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSHZKyawb77ixDdsGog4iWA",
+      "category": "youtube",
+      "enabled": true
+    },
+    {
+      "name": "YouTube: AI Explained",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuFcE3TixHMhNg",
+      "category": "youtube",
+      "enabled": true
+    },
+    {
+      "name": "YouTube: Google DeepMind",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC0rqucBdTuFTjJiefW5t-IQ",
+      "category": "youtube",
+      "enabled": true
+    },
+    {
+      "name": "YouTube: OpenAI",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCbR6eQ-7jPCip0IBYQxQ",
+      "category": "youtube",
+      "enabled": true
+    },
+
+    "===== X/Twitter 热门 (通过 Nitter RSS) =====",
+    {
+      "name": "X: @kobotic (AI news)",
+      "url": "https://nitter.net/kobotic/rss",
+      "category": "x",
+      "enabled": false
+    },
+    {
+      "name": "X: @_akhaliq (AI papers)",
+      "url": "https://nitter.net/_akhaliq/rss",
+      "category": "x",
+      "enabled": false
+    },
+    {
+      "name": "X: @ylecun (Yann LeCun)",
+      "url": "https://nitter.net/ylecun/rss",
+      "category": "x",
+      "enabled": false
+    },
+    {
+      "name": "X: @kareem_carr",
+      "url": "https://nitter.net/kareem_carr/rss",
+      "category": "x",
+      "enabled": false
+    },
+    {
+      "name": "X: @goodside",
+      "url": "https://nitter.net/goodside/rss",
+      "category": "x",
+      "enabled": false
+    },
+
+    "===== 硬件与芯片 =====",
+    {
+      "name": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/feed/",
+      "category": "hardware",
+      "enabled": true
+    },
+    {
+      "name": "AMD Blog",
+      "url": "https://community.amd.com/community/amd-blog/blog/rss",
+      "category": "hardware",
+      "enabled": true
+    },
+    {
+      "name": "Intel Blog",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/news.rss",
+      "category": "hardware",
+      "enabled": true
+    },
+    {
+      "name": "Qualcomm Blog",
+      "url": "https://www.qualcomm.com/news/feed",
+      "category": "hardware",
+      "enabled": true
+    },
+
+    "===== 开源与开发工具 =====",
+    {
+      "name": "GitHub Trending",
+      "url": "https://github.com/trending.rss",
+      "category": "dev",
+      "enabled": false
+    },
+    {
+      "name": "Stack Overflow Blog",
+      "url": "https://stackoverflow.blog/feed/",
+      "category": "dev",
+      "enabled": true
+    },
+    {
+      "name": "Dev.to",
+      "url": "https://dev.to/feed",
+      "category": "dev",
+      "enabled": true
+    }
+  ]
+}
